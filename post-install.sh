@@ -17,17 +17,17 @@ sudo apt-get update -y
 sudo apt-get upgrade -y
 
 # Install OpenSSH
-sudo apt-get install openssh-server -y
+# sudo apt-get install openssh-server -y
 
 # Enable Firewall
-sudo ufw enable 
+# sudo ufw enable 
 
 # configure the firewall
-sudo ufw allow OpenSSH
+# sudo ufw allow OpenSSH
 
 # Disabling root login 
 echo "PermitRootLogin no" >> /etc/ssh/sshd_config 
-echo "PermitEmptyPasswords no" /etc/ssh/sshd_config
+# echo "PermitEmptyPasswords no" /etc/ssh/sshd_config
 
 # Message of the day 
 sudo wget https://raw.githubusercontent.com/jwandrews99/Linux-Automation/master/misc/motd.sh
@@ -60,7 +60,7 @@ maxretry = 4
 " >> /etc/fail2ban/jail.local
 
 # SpeedTest Install
-sudo apt-get install speedtest-cli -y
+# sudo apt-get install speedtest-cli -y
 
 # SFTP Server / FTP server that runs over ssh
 echo "
