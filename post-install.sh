@@ -53,14 +53,14 @@ sudo systemctl enable fail2ban
 echo "
 [sshd]
 enabled = true
-port = 22
+port = 2222
 filter = sshd
 logpath = /var/log/auth.log
 maxretry = 4
 " >> /etc/fail2ban/jail.local
 
 # SpeedTest Install
-# sudo apt-get install speedtest-cli -y
+sudo apt-get install speedtest-cli -y
 
 # SFTP Server / FTP server that runs over ssh
 echo "
