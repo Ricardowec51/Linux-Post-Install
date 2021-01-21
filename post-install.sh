@@ -15,7 +15,13 @@ sudo apt-get update -y
 
 # Upgrade the system
 sudo apt-get upgrade -y
-
+sudo usermod -aG docker ${USER}
+su - ${USER}
+id -nG
+sudo usermod -aG docker rwagner
+sudo apt install neofetch python3-pip -y
+pip3 install bpytop --upgrade
+sudo timedatectl set-timezone America/Guayaquil
 # Install OpenSSH
 # sudo apt-get install openssh-server -y
 
