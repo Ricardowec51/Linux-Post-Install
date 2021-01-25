@@ -15,9 +15,7 @@ sudo apt-get update -y
 
 # Upgrade the system
 sudo apt-get upgrade -y
-sudo apt install neofetch python3-pip -y
-sudo pip3 install bpytop --upgrade
-sudo timedatectl set-timezone America/Guayaquil
+
 # Install OpenSSH
 # sudo apt-get install openssh-server -y
 
@@ -100,12 +98,16 @@ if [[ $docker -eq "y" ]] || [[ $docker -eq "yes" ]]; then
     sudo usermod -aG docker rwagner
     echo " 
     
+        =================================
+    
         Installing Portainer on port 9000
+        
+        =================================
 
     "
 
     sudo docker volume create portainer_data
-    sudo docker run -d -p 8000:8000 -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce
+    sudo docker run -d -p 9000:9000 --name=portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce
 
 
     echo "
@@ -123,7 +125,9 @@ fi
 
 # Cleanup
 sudo apt install speedtest-cli
-sudo apt autoremove
+sudo apt install neofetch python3-pip -y
+sudo pip3 install bpytop --upgrade
+sudo timedatectl set-timezone America/Guayaquilsudo apt autoremove
 sudo apt clean 
 
 echo "
