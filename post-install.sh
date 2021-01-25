@@ -124,10 +124,10 @@ fi
 
 
 # Cleanup
-sudo apt install speedtest-cli
-sudo apt install neofetch python3-pip -y
+sudo apt install neofetch python3-pip speedtest-cli -y
 sudo pip3 install bpytop --upgrade
-sudo timedatectl set-timezone America/Guayaquilsudo apt autoremove
+sudo timedatectl set-timezone America/Guayaquil
+sudo apt autoremove
 sudo apt clean 
 
 echo "
@@ -146,5 +146,5 @@ If you installed Docker a portainer management image is running on ip:9000
 
 ######################################################################################################
 "
-
+sudo dmidecode -t memory
 exit 0
