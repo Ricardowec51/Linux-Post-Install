@@ -16,7 +16,7 @@ sudo apt-get update -y
 # Upgrade the system
 sudo apt-get upgrade -y
 sudo apt install neofetch python3-pip -y
-pip3 install bpytop --upgrade
+sudo pip3 install bpytop --upgrade
 sudo timedatectl set-timezone America/Guayaquil
 # Install OpenSSH
 # sudo apt-get install openssh-server -y
@@ -28,7 +28,7 @@ sudo timedatectl set-timezone America/Guayaquil
 # sudo ufw allow OpenSSH
 
 # Disabling root login 
-echo "PermitRootLogin no" >> /etc/ssh/sshd_config 
+# echo "PermitRootLogin no" >> /etc/ssh/sshd_config 
 # echo "PermitEmptyPasswords no" /etc/ssh/sshd_config
 
 # Message of the day 
@@ -38,7 +38,7 @@ sudo chmod +x /etc/update-motd.d/05-info
 
 # Automatic downloads of security updates
 sudo apt-get install -y unattended-upgrades
-echo "Unattended-Upgrade::Allowed-Origins {
+# echo "Unattended-Upgrade::Allowed-Origins {
 #   "${distro_id}:${distro_codename}-security";
 #//  "${distro_id}:${distro_codename}-updates";
 #//  "${distro_id}:${distro_codename}-proposed";
