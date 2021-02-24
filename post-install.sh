@@ -36,14 +36,14 @@ sudo chmod +x /etc/update-motd.d/05-info
 
 # Automatic downloads of security updates
 sudo apt-get install -y unattended-upgrades
-# echo "Unattended-Upgrade::Allowed-Origins {
-#   "${distro_id}:${distro_codename}-security";
-#//  "${distro_id}:${distro_codename}-updates";
-#//  "${distro_id}:${distro_codename}-proposed";
-#//  "${distro_id}:${distro_codename}-backports";
+ echo "Unattended-Upgrade::Allowed-Origins {
+   "${distro_id}:${distro_codename}-security";
+//  "${distro_id}:${distro_codename}-updates";
+//  "${distro_id}:${distro_codename}-proposed";
+//  "${distro_id}:${distro_codename}-backports";
 
-#Unattended-Upgrade::Automatic-Reboot "true"; 
-#}; " >> /etc/apt/apt.conf.d/50unattended-upgrades
+Unattended-Upgrade::Automatic-Reboot "true"; 
+}; " >> /etc/apt/apt.conf.d/50unattended-upgrades
 
 # Fail2Ban install 
 sudo apt-get install -y fail2ban
