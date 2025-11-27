@@ -38,7 +38,7 @@ function paso3() {
 # Paso 4: Instalación de utilitarios
 function paso4() {
     echo "Paso 4: Instalación de utilitarios."
-    sudo apt install -y neofetch speedtest-cli glances cockpit net-tools
+    sudo apt install -y fastfetch speedtest-cli glances cockpit net-tools
     if [ $? -eq 0 ]; then
         echo "Utilitarios instalados correctamente."
     else
